@@ -1,16 +1,260 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-p {
-  margin: 0;
-  padding: 0;
+.components {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center; /* add this line */
 }
-a {
-  color: inherit;
-  text-decoration: none;
+
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.app-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #777;
+}
+
+.titles {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  margin: 0 auto; 
+}
+
+.app-header button {
+  font-size: xx-large;
+  margin: 0;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.app-header button:hover {
+  background-color:#423a52;
+  color: white;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid lightgray;
+  width: 25%;
+}
+
+.sidebar button{
+ background-color: transparent;
+ font-size: x-large;
+ border-color: transparent;
+ cursor: pointer;
+}
+
+.sidebar button:hover{
+  background-color: #423a52 ;
+  color: white;
+ }
+ 
+.sidebar-heading{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.sidebar-heading h2{
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0 ;
+}
+
+.sidebar-notes{
+  height: calc(100vh - 78px);
+}
+
+.sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+
+.sidebar-note-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-note small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  display: block;
+  color: gray;
+}
+
+.sidebar-note-preview {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin: 10px 0;
+}
+
+.sidebar-note:hover {
+  background: #423a52;
+}
+
+.sidebar-note:hover .sidebar-note-title {
+  color: white;
+}
+
+.sidebar-note:hover .sidebar-note-preview {
+  color: white;
+}
+
+.main-notes{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 74%;
+}
+
+.main-notes-heading {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  align-items: center; 
+}
+
+.main-notes h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 10px;
+ 
+}
+
+.main-notes p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 10px;
+  color: gray;
+  font-size: x-small;
+}
+
+.main-notes-buttons{
+  margin-left: auto;
+}
+.main-notes-buttons button{
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-notes-buttons button:hover{
+  background-color: #423a52;
+  color: white;
+
+}
+
+.main-notes-content {
+  height: 50vh;
+}
+
+
+.sidebar-hidden {
+  display: none;
+}
+
+.no-active-note {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.note-textbox{
+  width: 100%;
+  height: 100vh;
+  border: transparent;
+}
+
+.quill{
+  height: 600px;
+}
+
+.note-title{
+  width: 100%;
+  font-size: 30px;
+  border: transparent;
+}
+
+.datetime-header{
+  border: transparent;
+}
+
+.no-note{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 25px;
+  color: gray;
+}
+
+
+.sidebar-no-note {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid lightgray;
+  width: 25%;
+}
+
+.sidebar-no-note button{
+ background-color: transparent;
+ font-size: x-large;
+ border-color: transparent;
+ cursor: pointer;
+}
+
+.sidebar-no-note button:hover{
+  background-color: #423a52 ;
+  color: white;
+ }
+ 
+.sidebar-heading-no-note{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.sidebar-heading-no-note h2{
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0 ;
+}
+
+#title{
+  width: 100%;
+  font-size: 30px;
+  border: transparent;
+}
+
+.preview-text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
